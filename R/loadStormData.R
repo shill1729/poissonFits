@@ -9,7 +9,8 @@
 #' @export loadStormData
 loadStormData <- function(exclude = TRUE, type = "Tropical")
 {
-  dta <- stormReportScraper()
+  # dta <- stormReportScraper()
+  dta <- poissonFits::stormReport
   storms <- filterStormType(dta, exclude, type)
   atlantic <- filterStormBasin(storms)
   pacific <- filterStormBasin(storms, "Pacific")
