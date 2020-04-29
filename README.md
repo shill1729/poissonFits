@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package provides convenient functions for fitting Poisson distributions, regressions, and processes to count data of some phenomena or events.
+This package provides convenient functions for fitting Poisson distributions, regressions, and processes to count data of some phenomena or events. It also contains data-sets for examples of approximately Poisson distributed phenomena.
 
 ## Installation
 
@@ -14,31 +14,18 @@ You can install the latest version from GitHub with:
 devtools::install_github("shill1729/poissonFits")
 ```
 
-## Load data from NHC/NOAA
-
-Load hurricane data from NHC NOAA, since they conveniently provide an XML file of all storm reports since 1958. The data-set is provided with the package however, a scraper is also available to get the latest file of storm-reports (Which I imagine does not change frequently until after new storm seasons are over). NOTE: Early data contains named storms without designating them either a hurricane, a tropical storm, or a subtropical storm.
-
-``` r
-library(poissonFits)
-# Default loads no tropical storms;
-countData <- loadStormData()
-
-# Load only tropical storms
-# countData <- loadStormData(exclude = FALSE)
-
-# Load only modern named Hurricanes
-# countData <- loadStormData(exclude = FALSE, type = "Hurricane")
-```
-
 ## Fit a Poisson distribution on the number of hurricanes per year in the Atlantic basin
-The parameter for the Poisson distribution is chosen via MLE. A Chi-square test is then performed on the goodness of fit of the distribution to the empirical data.
+We can load hurricane data from NHC NOAA, since they conveniently provide an XML file of all storm reports since 1958. The data-set is provided with the package, however, a scraper is also available to get the latest file of storm-reports (which I imagine does not change frequently until after new storm seasons are over). NOTE: Early data contains named storms without designating them either a hurricane, a tropical storm, or a subtropical storm. The parameter for the Poisson distribution is chosen via MLE. A Chi-square test is then performed on the goodness of fit of the distribution to the empirical data.
 
 ```r
 library(poissonFits)
 # Significance level for Chi-square test
 alpha <- 0.05
 
-# Assuming we loaded countDat from the previous example
+# Default loads no tropical storms;
+countData <- loadStormData()
+
+# Pick either the atlantic, pacific, or world
 countsYear <- countData$atlantic
 # Get just the counts
 countsData <- countsYear$freq
@@ -48,7 +35,7 @@ poissonFit(countsData)
 ```
 
 ## Fit a Poisson distribution on the number of mass-shootings in the USA per month
-Same as the above example, just different dat: the parameter for the Poisson distribution is chosen via MLE. A Chi-square test is then performed on the goodness of fit of the distribution to the empirical data.
+Mother-jones magazine has collected data into a google-sheet tracking the mass-shootings in the USA. We downloaded this sometime ago provide in the package as a data-set. No scraper is available to update it (yet). The parameter for the Poisson distribution is chosen via MLE. A Chi-square test is then performed on the goodness of fit of the distribution to the empirical data.
 
 ```r
 library(poissonFits)
