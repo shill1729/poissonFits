@@ -4,10 +4,10 @@ Title: Provides functions for fitting Poisson models to count data and relevant 
 Version: 0.1.0
 Author: S. Hill
 Maintainer: The package maintainer <52792611+shill1729@users.noreply.github.com>
-Description: Provides functions for fitting Poisson models to count data. Also included are exemplary data sets consisting of
-    mass shootings in the US per month and number of hurricanes per year in the Atlantic or Pacific.
+Description: Provides functions for fitting Poisson models to count data. Also included are exemplary data sets, for example the
+        number of hurricanes per year in the Atlantic or Pacific.
 License: MIT + file LICENSE
-Imports: httr, xml2, utils, graphics, stats, fitdistrplus
+Imports: httr, XML, xml2, utils, graphics, stats, fitdistrplus
 Depends: R (>= 3.5.0)
 Encoding: UTF-8
 LazyData: true

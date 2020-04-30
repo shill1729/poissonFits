@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package provides convenient functions for fitting Poisson distributions, regressions, and processes to count data of some phenomena or events. It also contains data-sets for examples of approximately Poisson distributed phenomena.
+This package provides convenient functions for fitting Poisson distributions, regressions, and processes to count data of some phenomena or events. It also contains data-sets for examples of approximately Poisson distributed phenomena. These include data-sets named in R as "stormReport", "ENSO", and "atlanticStormsENSO" and "shootings". See the internal R documentation for more info and sources.
 
 ## Installation
 
@@ -30,21 +30,6 @@ countsYear <- countData$atlantic
 # Get just the counts
 countsData <- countsYear$freq
 
-# Pass just the count data!
+# Pass just the count data to poissonFit
 poissonFit(countsData)
 ```
-
-## Fit a Poisson distribution on the number of mass-shootings in the USA per month
-Mother-jones magazine has collected data into a google-sheet tracking the mass-shootings in the USA, see documentation on "shootings" for more info and a link to their data-set. We downloaded this sometime ago provide in the package as a data-set. No scraper is available to update it (yet). The parameter for the Poisson distribution is chosen via MLE. A Chi-square test is then performed on the goodness of fit of the distribution to the empirical data.
-
-```r
-library(poissonFits)
-# Load data
-data("shootings")
-# Load the count-data of number of shootings per month
-shCounts <- shootingCounts()
-# Pass just the counts
-poissonFit(shCounts$Freq) # significance level defaults to 0.05
-```
-
-

@@ -12,6 +12,6 @@
 data(stormReport)
 }
 \description{
-NHC NOAA storm report since 1958
+NHC NOAA storm report since 1958, combined with data pulled from wikipedia for 1950-1957
 }
 \keyword{datasets}
