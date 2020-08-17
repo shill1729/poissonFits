@@ -4,7 +4,9 @@
 \name{ENSO}
 \alias{ENSO}
 \title{ENSO data-set}
-\format{a data.frame of 3-month moving averages of warming/cooling differences in the ENSO}
+\format{
+a data.frame of 3-month moving averages of warming/cooling differences in the ENSO
+}
 \source{
 {From the \href{https://origin.cpc.ncep.noaa.gov/products/analysis_monitoring/ensostuff/ONI_v5.php}{NHC-NOAA ENSO tracker}}
 }

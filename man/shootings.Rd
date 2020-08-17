@@ -4,7 +4,9 @@
 \name{shootings}
 \alias{shootings}
 \title{Shootings data-set}
-\format{a data.frame dates, perpetrators and various variables on mass shootings}
+\format{
+a data.frame dates, perpetrators and various variables on mass shootings
+}
 \source{
 {From the \href{https://www.motherjones.com/politics/2012/12/mass-shootings-mother-jones-full-data/}{Mother-Jones 1982-present Shootings investigation} google sheet tracking mass-shootings in the USA.}
 }

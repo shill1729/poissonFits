@@ -4,7 +4,9 @@
 \name{atlanticStormsENSO}
 \alias{atlanticStormsENSO}
 \title{atlanticStormsENSO data-set}
-\format{a data.frame containing "year" "num_storms" and the 3-month moving average of ENSO changes}
+\format{
+a data.frame containing "year" "num_storms" and the 3-month moving average of ENSO changes
+}
 \source{
 {See the individual documentation for \code{stormReport} and \code{ENSO}, where this data-set is derived.}
 }

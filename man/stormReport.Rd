@@ -4,7 +4,9 @@
 \name{stormReport}
 \alias{stormReport}
 \title{stormReport data-set}
-\format{a list of all storm reports with year, basin and name}
+\format{
+a list of all storm reports with year, basin and name
+}
 \source{
 {From the \href{https://www.nhc.noaa.gov/TCR_StormReportsIndex.xml}{NHC-NOAA storm report}}
 }
